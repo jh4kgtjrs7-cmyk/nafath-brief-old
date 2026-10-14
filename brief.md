@@ -32,5 +32,7 @@ Where the law applies, the authority acting as controller must obtain and prove 
 
 Resource: Royal Decree 6/2022 Issuing the Personal Data Protection Law (Consolidated) - https://decree.om/2022/l20220006/
 ## Misconception in My Track
+A common belief is that DNS over HTTPS makes DNS answers trustworthy, so DNSSEC is no longer needed. It does not. DoH protects the connection between the user and the resolver from eavesdropping and tampering on the path. It cannot show that the DNS data itself is genuine, because a resolver can still return false or poisoned answers. DNSSEC signs the data and lets a client verify it. The two solve different problems and work best together. Proof is in RFC 8484, section 9, Security Considerations.
 
 ## Open Question
+Which Omani authority would act as the national SSO's data controller, and who is accountable if a citizen's login data leaks through a third-party identity provider? The answer decides who must notify citizens and the ministry after a breach.
